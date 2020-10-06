@@ -10,11 +10,9 @@ const Nav = () => {
     return (
         <>
         
-      <nav className="navbar sticky-top navbar-expand-lg navbar-light navSt">
+      <nav className="navbar sticky-top navbar-expand-lg bg-danger navSt">
       <div className="logo">
-          
-
-          <h3 className="gfont">Cassondra <br></br> Reinsel</h3>
+          <h3 className="gfont">Chorez</h3>
         </div>
      
     
