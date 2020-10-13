@@ -50,8 +50,8 @@ const Register = () => {
   
   return (
     <>
-      
-          <form>
+      <h2 className="text-center">Register</h2>
+          <form className= "container">
             <div className="form-group">
               <label for="Name">Name</label>
               <input
@@ -109,9 +109,7 @@ const Register = () => {
             </div>
           </form>
         
-          <Button variant="primary" onClick={handleClose}>
-            Register Me!
-          </Button>
+          
        
     </>
   );
