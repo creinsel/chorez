@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import API from "../../utils/API";
+// import API from "../../utils/API";
 
 const Register = () => {
-  const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: ""
+    password: "",
+    birthday: "",
+    payAcc: ""
   });
 
 
@@ -21,37 +22,34 @@ const Register = () => {
   };
 
   const handleClose = () => {
-    setShow(false);
+    
     // console.log({formData})
-    const { name, email, password } = formData;
+    const { name, email, password, birthday, payAcc } = formData;
 
-    if (name && email && password)
-      API.saveUser({
-        name,
-        points: 0,
-        email,
-        password,
-        act: []
-      })
-        .then(res => {
-          // const password = formData.password
-          // const rounds = 10
+    // if (name && email && password && birthday)
+    //   API.saveUser({
+    //     name,
+    //     points: 0,
+    //     email,
+    //     password,
+    //     birthday,
+    //     payAcc,
+    //     act: []
+    //   })
+    //     .then(res => {
+    //       // const password = formData.password
+    //       // const rounds = 10
 
-          var userId = res.data._id;
+    //       var userId = res.data._id;
 
-          localStorage.setItem("userId", userId);
-        })
-        .catch(err => console.log(err));
+    //       localStorage.setItem("userId", userId);
+    //     })
+    //     .catch(err => console.log(err));
   };
 
-  const handleShow = () => setShow(true);
-
+  
   return (
     <>
-      <a variant="primary" onClick={handleShow}>
-        Sign Up
-      </a>
-
       
           <form>
             <div className="form-group">
@@ -84,6 +82,28 @@ const Register = () => {
                 placeholder="Password"
                 name="password"
                 value={formData.password}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div class="form-group">
+              <label for="birthday">DOB</label>
+              <input
+                type="birthday"
+                class="form-control"
+                placeholder="mm/dd/yy"
+                name="birthday"
+                value={formData.birthday}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div class="form-group">
+              <label for="payAcc">Payment</label>
+              <input
+                type="payment"
+                class="form-control"
+                placeholder="Payment"
+                name="payAcc"
+                value={formData.payAcc}
                 onChange={handleInputChange}
               />
             </div>
