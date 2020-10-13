@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import {Modal, Button} from 'react-bootstrap';
 
-
-const RegMod = () => {
+const LogMod = () => {
     const [show, setShow] = useState(false);
   
     const handleClose = () => setShow(false);
@@ -11,7 +10,7 @@ const RegMod = () => {
     return (
       <>
         <Button variant="primary" onClick={handleShow}>
-          Register Me!
+          Login
         </Button>
   
         <Modal show={show} onHide={handleClose}>
@@ -31,4 +30,4 @@ const RegMod = () => {
       </>
     );
 };
-    export default RegMod;
+    export default LogMod;
