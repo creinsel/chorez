@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import RegMod from '../RegMod'
 // import API from "../../utils/API";
 
 const Register = () => {
@@ -107,6 +107,7 @@ const Register = () => {
                 onChange={handleInputChange}
               />
             </div>
+            <RegMod/>
           </form>
         
           
