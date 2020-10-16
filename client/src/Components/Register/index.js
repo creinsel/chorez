@@ -23,28 +23,28 @@ const Register = () => {
 
   const handleClose = () => {
     
-    // console.log({formData})
+    console.log({formData})
     const { name, email, password, birthday, payAcc } = formData;
 
-    // if (name && email && password && birthday)
-    //   API.saveUser({
-    //     name,
-    //     points: 0,
-    //     email,
-    //     password,
-    //     birthday,
-    //     payAcc,
-    //     act: []
-    //   })
-    //     .then(res => {
-    //       // const password = formData.password
-    //       // const rounds = 10
+    if (name && email && password && birthday)
+      API.saveUser({
+        name,
+        points: 0,
+        email,
+        password,
+        birthday,
+        payAcc,
+        act: []
+      })
+        .then(res => {
+          const password = formData.password
+          const rounds = 10
 
-    //       var userId = res.data._id;
+          var userId = res.data._id;
 
-    //       localStorage.setItem("userId", userId);
-    //     })
-    //     .catch(err => console.log(err));
+          localStorage.setItem("userId", userId);
+        })
+        .catch(err => console.log(err));
   };
 
   
