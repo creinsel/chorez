@@ -35,7 +35,8 @@ const Register = () => {
         password,
         birthday,
         payAcc,
-        act: []
+        postedCh: [],
+        completedCh: []
       })
         .then(res => {
           const password = formData.password
