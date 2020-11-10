@@ -10,8 +10,14 @@ const Welcome = () =>{
     return(
         <>
         <Nav/>
-        <Description/>
+        {wel?
+        <div>
+         <Description/>
         <Disclaimer/>
+        </div>
+        :<div></div>
+      }
+       
         <Register/>
         <Login/>
         </>
