@@ -10,6 +10,18 @@ const Welcome = () =>{
   const [log, setLog]= useState(false);
   const [wel, setWel]= useState(true);
 
+  const showReg = () =>{
+    setReg(true);
+    setLog(false);
+    setWel(false);
+  };
+
+  const showLog = () =>{
+    setReg(false);
+    setLog(true);
+    setWel(false);
+  };
+
     return(
         <>
         <Description/>
